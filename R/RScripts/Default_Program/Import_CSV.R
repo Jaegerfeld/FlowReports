@@ -1,6 +1,6 @@
 library(readr)
 
-filepath_Import <- gsub(" ", "", paste("Export/CSV/",teamname,"_IssueTimes.csv"))
+filepath_Import <- gsub(" ", "", paste("CSV/",teamname,"_IssueTimes.csv"))
 
 Features_DT <- read_csv(filepath_Import,
             col_types = cols(
@@ -12,7 +12,7 @@ Features_DT <- read_csv(filepath_Import,
                                   )
 
 
-filepath_ImportCFD <- gsub(" ", "", paste("Export/CSV/",teamname,"_CFD.csv"))
+filepath_ImportCFD <- gsub(" ", "", paste("CSV/",teamname,"_CFD.csv"))
 FeaturesCFD_DT <- read_csv(filepath_ImportCFD,
                            col_types = cols(
                              `Day` = col_date(format = "%d.%m.%Y"),
