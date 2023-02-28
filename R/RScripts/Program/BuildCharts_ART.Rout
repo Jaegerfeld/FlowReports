@@ -1,0 +1,181 @@
+
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R ist freie Software und kommt OHNE JEGLICHE GARANTIE.
+Sie sind eingeladen, es unter bestimmten Bedingungen weiter zu verbreiten.
+Tippen Sie 'license()' or 'licence()' für Details dazu.
+
+R ist ein Gemeinschaftsprojekt mit vielen Beitragenden.
+Tippen Sie 'contributors()' für mehr Information und 'citation()',
+um zu erfahren, wie R oder R packages in Publikationen zitiert werden können.
+
+Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
+'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
+Tippen Sie 'q()', um R zu verlassen.
+
+[Vorher gesicherter Workspace wiederhergestellt]
+
+> library(readr)
+Warnmeldung:
+Paket 'readr' wurde unter R Version 4.0.4 erstellt 
+> library(timevis)
+> library(dplyr)
+
+Attache Paket: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Warnmeldung:
+Paket 'dplyr' wurde unter R Version 4.0.4 erstellt 
+> library(ggplot2)
+Warnmeldung:
+Paket 'ggplot2' wurde unter R Version 4.0.4 erstellt 
+> library(ggrepel)
+Warnmeldung:
+Paket 'ggrepel' wurde unter R Version 4.0.4 erstellt 
+> #library(lubridate)
+> 
+> args = commandArgs(trailingOnly=TRUE)
+> 
+> WD <- getwd()
+> 
+> teamname = "AppART"
+> 
+> if (length(args)==0) {
++    startDate <- Sys.Date()-365
++ } else if (length(args)==1) {
++ 
++   startDate <- Sys.Date() - args[1]
++ }
+> 
+> #setwd(dir)
+> WD <- getwd()
+> 
+> print(args)
+character(0)
+> 
+> source("RScripts/Default_Skyway/Import_CSV.R")
+Warnung: 104 parsing failures.
+row col   expected     actual                               file
+  1  -- 18 columns 17 columns 'Export/CSV/AppART_IssueTimes.csv'
+  2  -- 18 columns 17 columns 'Export/CSV/AppART_IssueTimes.csv'
+  3  -- 18 columns 17 columns 'Export/CSV/AppART_IssueTimes.csv'
+  4  -- 18 columns 17 columns 'Export/CSV/AppART_IssueTimes.csv'
+  5  -- 18 columns 17 columns 'Export/CSV/AppART_IssueTimes.csv'
+... ... .......... .......... ..................................
+See problems(...) for more details.
+
+Warnmeldung:
+Missing column names filled in: 'X11' [11] 
+> source("RScripts/APPART/cleanup.R")
+Warnmeldung:
+In mask$eval_all_filter(dots, env_filter) :
+  Inkompatible Methoden ("Ops.POSIXt", "Ops.Date") für ">="
+> source("RScripts/APPART/Feature_Calculations.R")
+> source("RScripts/Default_Skyway/Detail_Calculations.R")
+> source("RScripts/Default_Skyway/scattertable.R")
+> source("RScripts/Default_Skyway/Plottings.R")
+
+Attache Paket: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+
+Attache Paket: 'EnvStats'
+
+The following objects are masked from 'package:stats':
+
+    predict, predict.lm
+
+The following object is masked from 'package:base':
+
+    print.default
+
+In case you would like cite this package, cite it as:
+     Patil, I. (2018). ggstatsplot: "ggplot2" Based Plots with Statistical Details. CRAN.
+     Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
+`geom_smooth()` using formula 'y ~ x'
+Warnmeldungen:
+1: Paket 'ggthemes' wurde unter R Version 4.0.4 erstellt 
+2: Paket 'plotly' wurde unter R Version 4.0.4 erstellt 
+3: Paket 'EnvStats' wurde unter R Version 4.0.4 erstellt 
+4: Paket 'ggstatsplot' wurde unter R Version 4.0.4 erstellt 
+5: Paket 'ggtext' wurde unter R Version 4.0.4 erstellt 
+6: ggrepel: 21 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+> 
+> source("RScripts/Default_Skyway/CFD_Build.R")
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+Found more than one class "atomicVector" in cache; using the first, from namespace 'Matrix'
+Also defined by 'Rmpfr'
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v tibble  3.0.4     v stringr 1.4.0
+v tidyr   1.1.2     v forcats 0.5.0
+v purrr   0.3.4     
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x plotly::filter() masks dplyr::filter(), stats::filter()
+x dplyr::lag()     masks stats::lag()
+
+Attache Paket: 'reshape2'
+
+The following object is masked from 'package:tidyr':
+
+    smiths
+
+Warnmeldung:
+Paket 'tidyverse' wurde unter R Version 4.0.4 erstellt 
+> 
+> source("RScripts/Default_Skyway/Export.R")
+
+Attache Paket: 'gridExtra'
+
+The following object is masked from 'package:dplyr':
+
+    combine
+
+`geom_smooth()` using formula 'y ~ x'
+Warnmeldung:
+ggrepel: 8 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+> 
+> 
+> proc.time()
+       User      System verstrichen 
+       7.81        1.35       11.67 

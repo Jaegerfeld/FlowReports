@@ -1,0 +1,126 @@
+
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R ist freie Software und kommt OHNE JEGLICHE GARANTIE.
+Sie sind eingeladen, es unter bestimmten Bedingungen weiter zu verbreiten.
+Tippen Sie 'license()' or 'licence()' für Details dazu.
+
+R ist ein Gemeinschaftsprojekt mit vielen Beitragenden.
+Tippen Sie 'contributors()' für mehr Information und 'citation()',
+um zu erfahren, wie R oder R packages in Publikationen zitiert werden können.
+
+Tippen Sie 'demo()' für einige Demos, 'help()' für on-line Hilfe, oder
+'help.start()' für eine HTML Browserschnittstelle zur Hilfe.
+Tippen Sie 'q()', um R zu verlassen.
+
+[Vorher gesicherter Workspace wiederhergestellt]
+
+> library(readr)
+Warnmeldung:
+Paket 'readr' wurde unter R Version 4.0.4 erstellt 
+> library(timevis)
+> library(dplyr)
+
+Attache Paket: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Warnmeldung:
+Paket 'dplyr' wurde unter R Version 4.0.4 erstellt 
+> library(ggplot2)
+Warnmeldung:
+Paket 'ggplot2' wurde unter R Version 4.0.4 erstellt 
+> library(ggrepel)
+Warnmeldung:
+Paket 'ggrepel' wurde unter R Version 4.0.4 erstellt 
+> 
+> args = commandArgs(trailingOnly=TRUE)
+> #setwd(dir)
+> WD <- getwd()
+> print(WD)
+[1] "H:/Repositorys/ToolstackLPM"
+> teamname <- "Big Lebowski"
+> 
+> source("RScripts/Team_Lebowski/Import_CSV.R")
+Warnung: 183 parsing failures.
+row col   expected     actual                                      file
+  1  -- 20 columns 19 columns 'Export/CSV/Team_Lebowski_IssueTimes.csv'
+  4  -- 20 columns 19 columns 'Export/CSV/Team_Lebowski_IssueTimes.csv'
+  5  -- 20 columns 19 columns 'Export/CSV/Team_Lebowski_IssueTimes.csv'
+  9  -- 20 columns 19 columns 'Export/CSV/Team_Lebowski_IssueTimes.csv'
+ 19  -- 20 columns 19 columns 'Export/CSV/Team_Lebowski_IssueTimes.csv'
+... ... .......... .......... .........................................
+See problems(...) for more details.
+
+> source("RScripts/Team_Lebowski/cleanup.R")
+> 
+> source("RScripts/Team_Lebowski/DoneIssues_Cleanup.R")
+> source("RScripts/Team_Lebowski/DoneIssues_Calculations.R")
+> 
+> source("RScripts/Team_Lebowski/DoneStory_Cleanup.R")
+> source("RScripts/Team_Lebowski/DoneStorys_Calculations.R")
+> 
+> source("RScripts/Team_Lebowski/scattertable.R")
+> source("RScripts/Team_Lebowski/Plottings.R")
+
+Attache Paket: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout
+
+
+Attache Paket: 'EnvStats'
+
+The following objects are masked from 'package:stats':
+
+    predict, predict.lm
+
+The following object is masked from 'package:base':
+
+    print.default
+
+In case you would like cite this package, cite it as:
+     Patil, I. (2018). ggstatsplot: "ggplot2" Based Plots with Statistical Details. CRAN.
+     Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
+`geom_smooth()` using formula 'y ~ x'
+`geom_smooth()` using formula 'y ~ x'
+Warnmeldungen:
+1: Paket 'ggthemes' wurde unter R Version 4.0.4 erstellt 
+2: Paket 'plotly' wurde unter R Version 4.0.4 erstellt 
+3: Paket 'EnvStats' wurde unter R Version 4.0.4 erstellt 
+4: Paket 'ggstatsplot' wurde unter R Version 4.0.4 erstellt 
+5: Paket 'ggtext' wurde unter R Version 4.0.4 erstellt 
+6: ggrepel: 67 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+> source("RScripts/Team_Lebowski/Export.R")
+
+Attache Paket: 'gridExtra'
+
+The following object is masked from 'package:dplyr':
+
+    combine
+
+`geom_smooth()` using formula 'y ~ x'
+`geom_smooth()` using formula 'y ~ x'
+Warnmeldung:
+ggrepel: 4 unlabeled data points (too many overlaps). Consider increasing max.overlaps 
+> 
+> proc.time()
+       User      System verstrichen 
+       7.67        0.73        8.39 
