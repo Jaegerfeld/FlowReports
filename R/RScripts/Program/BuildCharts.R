@@ -5,9 +5,7 @@ library(ggrepel)
 
 args = commandArgs(trailingOnly=TRUE)
 
-WD <- getwd()
-
-teamname = "APPART"
+teamname = "Program"
 
 if (length(args)==0) {
    startDate <- Sys.Date()-365
@@ -22,14 +20,14 @@ WD <- getwd()
 print(args)
 
 source("RScripts/Default_Skyway/Import_CSV.R")
-source("RScripts/APPART/cleanup.R")
-source("RScripts/APPART/Feature_Calculations.R")
+source("RScripts/Program/cleanup.R")
+source("RScripts/Program/Feature_Calculations.R")
 source("RScripts/Default_Skyway/Detail_Calculations.R")
 source("RScripts/Default_Skyway/scattertable.R")
 source("RScripts/Default_Skyway/Plottings.R")
 
 source("RScripts/Default_Skyway/AgingWorkCalculations.R")
-source("RScripts/Default_Skyway/CFD_Build.R")
+#source("RScripts/Default_Skyway/CFD_Build.R")
 
 source("RScripts/Default_Skyway/Export.R")
 

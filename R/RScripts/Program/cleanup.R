@@ -13,7 +13,7 @@ Features_DT <- Features_DT[!(is.na(Features_DT$`Closed Date`)),]
 Features_DT = filter(Features_DT,Features_DT$Resolution != "Duplicate" & Features_DT$Resolution != "Declined" & Features_DT$Resolution != "Won't Do" & Features_DT$Resolution != "Not Required" |is.na(Features_DT$Resolution))
 
 
-
+#brauchen wir gerade nicht, ist aber insgesamt interessant
 #Quickfix um bei Wurzel Issues sich selbst als Parent einzutragen -> ben?tigen wir beim Gruppieren f?r visualisierungen
 # Wird ben?tigt, wenn z.B. US in Features mit verarbeitet werden. Annahme: 1 Feature - n US ; 1 US - 1 Feature
 Features_DT$Group <- ifelse(is.na(Features_DT$Group), Features_DT$Key, Features_DT$Group)
@@ -32,9 +32,5 @@ Features_DT$`First Date` <- ifelse(is.na(Features_DT$`First Date`),
 #Features_DT$`Closed Date` <- ifelse(is.na(Features_DT$`Closed Date`),
                                             #format(tomorrow, "%Y-%m-%d %H:%M:%S "),
                                                #format(Features_DT$`Closed Date`, "%Y-%m-%d %H:%M:%S "))
-
-# Groupierung wichtig f?r Featuretapete
-Features_DT$Group <- ifelse(is.na(Features_DT$Group),
-                                        Features_DT$Key, Features_DT$Group)
 
 #Features_DT <- Features_DT %>% filter( Features_DT$`Created Date` >= startDate)
