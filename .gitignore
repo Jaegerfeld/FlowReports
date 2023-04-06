@@ -3,4 +3,5 @@ R/.Rhistory
 R/.Rhistory
 *.Rdata
 *.pper
-.Rproj.user
+*.Rproj.user
+*.vs
