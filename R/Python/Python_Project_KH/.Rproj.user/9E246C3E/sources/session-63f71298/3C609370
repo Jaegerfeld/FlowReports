@@ -1,0 +1,27 @@
+{
+    "id": "3C609370",
+    "path": "~/Git/FlowReports/R/Python/Python_Project_KH/Python_Project_KH.script.R",
+    "project_path": "Python_Project_KH.script.R",
+    "type": "r_source",
+    "hash": "83213672",
+    "contents": "",
+    "dirty": true,
+    "created": 1678973572183.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,19",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1678973665,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1678973747914,
+    "read_only": false,
+    "read_only_alternatives": []
+}
