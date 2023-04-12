@@ -1,9 +1,9 @@
 
 def calculate_CT(df):
 
-    df['CycleDays'] = df.loc[:,['In Analysis','Backlog',"In Implementation", "Blocker"]].sum(axis=1)
+    df['CycleDays'] = round(((df.loc[:,['In Analysis','Backlog',"In Implementation", "Blocker"]].sum(axis=1))/1440),2)
 
-    print(df)
+    #print(df)
 
     from pathlib import Path  
     filepath = Path('folder/subfolder/out.csv')  
