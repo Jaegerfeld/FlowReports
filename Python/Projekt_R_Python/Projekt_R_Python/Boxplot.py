@@ -21,18 +21,18 @@ def boxplot_test():
 
 def boxplot_test2():
 
-np.random.seed(100)
+    np.random.seed(100)
 
-data_a = np.random.randint(2,15, size=15)
-data_b = np.random.randint(5,18, size=20)
-data_c = np.random.randint(2,20, size=30)
-data_d = np.random.randint(1,30, size=40)
+    data_a = np.random.randint(2,15, size=15)
+    data_b = np.random.randint(5,18, size=20)
+    data_c = np.random.randint(2,20, size=30)
+    data_d = np.random.randint(1,30, size=40)
 
-data_2d=[data_a,data_b,data_c,data_d]
+    data_2d=[data_a,data_b,data_c,data_d]
 
-plt.boxplot(data_2d)
-plt.title('Boxplot Nr.2')
-plt.show()
+    plt.boxplot(data_2d)
+    plt.title('Boxplot Nr.2')
+    plt.show()
 
 
 
