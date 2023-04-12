@@ -1,7 +1,22 @@
 import pandas as pd 
+import os
 
-def importIssueTimes():
-
-    df = pd.read_csv(r'H:\Repositorys\Github\FlowReports\Python\Export\CSV\Program_IssueTimes.csv') 
+def importIssueTimes(teamname):
+    firstpart = os.getcwd()
+    path  = firstpart + '/CSV/'  + teamname + "_IssueTimes.csv"
+    df = pd.read_csv(path) 
+   # print(df)
     return df
-    print(df)
+   
+
+
+def importCfd(teamname):
+    firstpart = os.getcwd()
+    path  = firstpart + '/CSV/'  + teamname +  "_CFD.csv"
+    df = pd.read_csv(path) 
+    return df
+
+
+
+
+     

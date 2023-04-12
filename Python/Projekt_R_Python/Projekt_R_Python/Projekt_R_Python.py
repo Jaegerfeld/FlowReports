@@ -3,13 +3,25 @@ import Calculate_CT
 import Boxplot
 
 
-#df = Import_CSV.importIssueTimes()
+teamname = "Program"
 
-#Calculate_CT.calculate_CT(df)
+
+# Load DATA from csv
+IssuesDT = Import_CSV.importIssueTimes(teamname)
+CfdDT = Import_CSV.importCfd(teamname)
+
+
+# get CT
+CalcDT = Calculate_CT.calculate_CT(IssuesDT)
 
 #Boxplot.boxplot_test()
 
 Boxplot.boxplot_test2()
+
+
+
+
+    
 
 
 
