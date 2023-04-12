@@ -1,3 +1,12 @@
-import pandas as pd 
-df = pd.read_csv(r'C:\Users\khn\OneDrive - P3 group GmbH\Python\Projekt_R_To_Python\CSV\CSV - Kopie\Accounts_IssueTimes.csv') 
-print(df)
+import Import_CSV
+import Calculate_CT
+
+
+df = Import_CSV.importIssueTimes()
+
+Calculate_CT.calculate_CT(df)
+
+
+
+
+
