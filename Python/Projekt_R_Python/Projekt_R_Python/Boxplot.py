@@ -7,6 +7,7 @@
 
 # BOXPLOTT NR.1
 
+from re import L
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,7 +22,9 @@ def boxplot_test(table):
 
     #y=table['Created Date']
 
-    plt.boxplot(x, vert = False)
+    plt.boxplot(x, vert = False, patch_artist = True, 
+                boxprops = dict(facecolor = 'orange'),
+                medianprops = dict(color = 'black'))
     plt.title('Test_Boxplot Nr.1')
 
 
