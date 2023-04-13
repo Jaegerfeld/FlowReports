@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Boxplot.py" />
+    <Compile Include="Cleanup.py" />
     <Compile Include="Export.py" />
     <Compile Include="Import_CSV.py" />
     <Compile Include="Calculate_CT.py" />
