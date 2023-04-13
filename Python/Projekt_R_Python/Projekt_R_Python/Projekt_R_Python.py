@@ -1,6 +1,7 @@
 import Import_CSV
 import Calculate_CT
 import Boxplot
+import Export
 
 
 teamname = "Program"
@@ -18,6 +19,7 @@ Boxplot.boxplot_test(CalcDT)
 
 Boxplot.boxplot_test2()
 
+Export.exportCSV(CalcDT, "calcdt")
 
 
 
