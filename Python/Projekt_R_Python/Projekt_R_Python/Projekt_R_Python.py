@@ -2,6 +2,7 @@ import Import_CSV
 import Calculate_CT
 import Boxplot
 import Export
+import Scatterplot
 
 
 teamname = "Program"
@@ -15,11 +16,13 @@ CfdDT = Import_CSV.importCfd(teamname)
 # get CT
 CalcDT = Calculate_CT.calculate_CT(IssuesDT)
 
-Boxplot.boxplot_test(CalcDT)
+#Boxplot.boxplot_test(CalcDT)
 
-Boxplot.boxplot_test2()
+#Boxplot.boxplot_test2()
 
-Export.exportCSV(CalcDT, "calcdt")
+#Export.exportCSV(CalcDT, "calcdt")
+
+Scatterplot.scatterplot_test()
 
 
 
