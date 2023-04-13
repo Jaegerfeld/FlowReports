@@ -14,7 +14,7 @@ CfdDT = Import_CSV.importCfd(teamname)
 # get CT
 CalcDT = Calculate_CT.calculate_CT(IssuesDT)
 
-#Boxplot.boxplot_test()
+Boxplot.boxplot_test(CalcDT)
 
 Boxplot.boxplot_test2()
 
