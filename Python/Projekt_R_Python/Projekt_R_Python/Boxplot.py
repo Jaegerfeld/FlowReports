@@ -13,15 +13,19 @@ import matplotlib.pyplot as plt
 
 
 def boxplot_test(table):
+    
 
     #x=[0,1,2,3,5,8,13,21,34,55,89,144,233]
     x=table['CycleDays']
     #y=[0,5,10,20,40,80,160,320]
 
-    y=table['Created Date']
+    #y=table['Created Date']
 
-    plt.boxplot(x)
+    plt.boxplot(x, vert = False)
     plt.title('Test_Boxplot Nr.1')
+
+
+
     plt.show()
 
 def boxplot_test2():
