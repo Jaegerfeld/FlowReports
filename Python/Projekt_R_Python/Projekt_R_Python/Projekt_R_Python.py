@@ -17,7 +17,7 @@ CalcDT = Calculate_CT.calculate_CT(IssuesDT)
 
 Boxplot.boxplot_test(CalcDT)
 
-Boxplot.boxplot_test2()
+#Boxplot.boxplot_test2()
 
 Export.exportCSV(CalcDT, "calcdt")
 
