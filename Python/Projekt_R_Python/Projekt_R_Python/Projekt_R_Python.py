@@ -1,7 +1,9 @@
 import Import_CSV
+import Cleanup
 import Calculate_CT
 import Boxplot
 import Export
+import pandas as pd
 
 
 teamname = "Program"
@@ -11,9 +13,12 @@ teamname = "Program"
 IssuesDT = Import_CSV.importIssueTimes(teamname)
 CfdDT = Import_CSV.importCfd(teamname)
 
+#Clean RAW DATA
+CleandDT = Cleanup.cleanRAWTable(IssuesDT)
+
 
 # get CT
-CalcDT = Calculate_CT.calculate_CT(IssuesDT)
+CalcDT = Calculate_CT.calculate_CT(CleandDT)
 
 Boxplot.boxplot_test(CalcDT)
 
