@@ -29,6 +29,7 @@
     <Compile Include="Import_CSV.py" />
     <Compile Include="Calculate_CT.py" />
     <Compile Include="Projekt_R_Python.py" />
+    <Compile Include="Scatterplot.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.11" />

@@ -4,6 +4,7 @@ import Calculate_CT
 import Boxplot
 import Export
 import pandas as pd
+import Scatterplot
 
 
 teamname = "Program"
@@ -20,11 +21,13 @@ CleandDT = Cleanup.cleanRAWTable(IssuesDT)
 # get CT
 CalcDT = Calculate_CT.calculate_CT(CleandDT)
 
-Boxplot.boxplot_test(CalcDT)
+#Boxplot.boxplot_test(CalcDT)
 
 #Boxplot.boxplot_test2()
 
-Export.exportCSV(CalcDT, "calcdt")
+#Export.exportCSV(CalcDT, "calcdt")
+
+Scatterplot.scatterplot_test()
 
 
 
