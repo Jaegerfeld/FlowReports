@@ -27,7 +27,7 @@ CalcDT = Calculate_CT.calculate_CT(CleandDT)
 
 #Export.exportCSV(CalcDT, "calcdt")
 
-Scatterplot.scatterplot_test()
+Scatterplot.scatterplot_test(CalcDT)
 
 
 
