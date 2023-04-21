@@ -21,11 +21,10 @@ def cleanRAWTable(table):
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
     pd.set_option('display.max_colwidth', 15)
-<<<<<<< Updated upstream
     print(df)
-=======
+
     #print(df3)
->>>>>>> Stashed changes
+
    
 
 
