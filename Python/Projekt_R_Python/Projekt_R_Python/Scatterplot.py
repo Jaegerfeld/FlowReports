@@ -1,17 +1,31 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy import stats
+import pandas as pd
+import seaborn as sns
+from datetime import datetime
 
 
 def scatterplot_test(table):
 
-    x = table['Created Date']
-    y = table['CycleDays']
-    plt.scatter(x, y, color = 'blue')
+    plt.figure(figsize=[10,15],)
+    
+    table = table.convert_dtypes()
+    #print(table.iloc[0][10]) # Example 11.10.2022 09:49
 
-    #x = np.array([2,3,8,15,16,5,11,14,9,14])
-    #y = np.array([107,90,66,86,130,98,100,76,67,88])
-    #plt.scatter(x, y, color = 'red')
+    test_string = datetime.strptime('11.10.2022 09:49', '%d.%m.%Y %H:%M')
+    
+    print(test_string)
+    print(type(test_string))
 
-    plt.show()
+    test_timestamp = datetime.timestamp(test_string)
+    print(test_timestamp)
+
+    x = table['Closed Date'] #Dtype is a string Question is how to change string to float?
+    y = table['CycleDays'] #Dtype is a flote
+   
+    #sns.regplot(x = x, y = y, data = table[['Closed Date', 'CycleDays']])
+
+    #plt.show()
 
 
