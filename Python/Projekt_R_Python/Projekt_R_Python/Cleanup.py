@@ -6,14 +6,14 @@ import pandas as pd
 
 def cleanRAWTable(table):
     df = table.copy()
-
+    df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    Export.exportCSV(df,"trim")
     #remove all undone issues
     df["Closed Date"].replace("", np.nan, inplace=True)
     df.dropna(subset=("Closed Date"), inplace=True)
     #df.loc[(df['Status'] != "Won't Do")]
-    df3 = df[(df.Resolution == 'Done ')]
-    #df4 = df[(df.Res == "Won't Do")]
-    df2 = df[df['Done']== 'Done']
+    df = df[(df.Resolution == 'Done ') | (df.Resolution == 'Done ') | (df.Resolution == 'Done ') ]
+
 
     
     
@@ -21,7 +21,7 @@ def cleanRAWTable(table):
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
     pd.set_option('display.max_colwidth', 15)
-    print(df3)
+    print(df)
    
 
 
