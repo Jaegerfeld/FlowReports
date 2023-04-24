@@ -5,20 +5,16 @@ import pandas as pd
 import seaborn as sns
 from datetime import datetime
 import Plottings
+import Export
 
-
-def scatterplot_test(table):
+def get_scatterplot_summary(table):
 
     plt.figure(figsize=[10,15],)
 
     plotTitle = Plottings.getTitle(table)
     
     table = table.convert_dtypes()
-    #print(table.iloc[0][10]) # Example 11.10.2022 09:49
-
-    #table['Closed Date Datetime'] = datetime.strptime(table['Closed Date'].values, '%d.%m.%Y %H:%M')
     
-    #print(table['Closed Date Datetime'])
     datetime_list = []
     for i in table['Closed Date']:
         datetime_list.append(datetime.strptime(i, '%d.%m.%Y %H:%M'))
@@ -50,12 +46,10 @@ def scatterplot_test(table):
     plt.scatter(x,y)
     plt.title(plotTitle)
     plt.plot(x,mymodel)
+    export_path = Export.getExportPath() + 'scatterplot.pdf'
+    plt.savefig(export_path)
     plt.show()
 
-    #sns.scatterplot(data= table, x='Closed Date Timestamp' ,y='CycleDays')
-   
-    #sns.regplot(data= table, x='Closed Date Timestamp' ,y='CycleDays')
-
-    #plt.show()
-
+    return plt
+    
 

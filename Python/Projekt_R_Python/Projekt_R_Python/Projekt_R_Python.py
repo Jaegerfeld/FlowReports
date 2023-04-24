@@ -27,13 +27,11 @@ CalcDT = Calculate_CT.calculate_CT(CleandDT)
 title = Plottings.getTitle(CalcDT)
 
 
-Boxplot.boxplot_test(CalcDT)
+Boxplot.get_boxplot_summary(CalcDT)
 
-#Boxplot.boxplot_test2()
+Scatterplot.get_scatterplot_summary(CalcDT)
 
 #Export.exportCSV(CalcDT, "calcdt")
-
-Scatterplot.scatterplot_test(CalcDT)
 
 
 

@@ -11,10 +11,12 @@ from re import L
 from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
+import Export
 
 
 
-def boxplot_test(table):
+
+def get_boxplot_summary(table):
     
 
     
@@ -28,8 +30,11 @@ def boxplot_test(table):
                 flierprops = dict(markerfacecolor="r", markersize=3))
 
     plt.title('Test_Boxplot Nr.1')
-    plt.savefig('boxplot.pdf')
+    export_path = Export.getExportPath() + 'boxplot.pdf'
+    plt.savefig(export_path)
     plt.show()
+
+    return plt
 
 def boxplot_test2():
 
