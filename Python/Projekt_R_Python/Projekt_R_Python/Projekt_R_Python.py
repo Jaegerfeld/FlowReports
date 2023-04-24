@@ -23,7 +23,7 @@ CleandDT = Cleanup.cleanRAWTable(IssuesDT)
 # get CT
 CalcDT = Calculate_CT.calculate_CT(CleandDT)
 
-#Boxplot.boxplot_test(CalcDT)
+Boxplot.boxplot_test(CalcDT)
 
 #Boxplot.boxplot_test2()
 

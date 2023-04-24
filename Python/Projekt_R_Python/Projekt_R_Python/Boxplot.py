@@ -28,7 +28,7 @@ def boxplot_test(table):
                 flierprops = dict(markerfacecolor="r", markersize=3))
 
     plt.title('Test_Boxplot Nr.1')
-
+    plt.savefig('boxplot.pdf')
     plt.show()
 
 def boxplot_test2():
