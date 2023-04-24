@@ -2,6 +2,7 @@ import Import_CSV
 import Cleanup
 import Calculate_CT
 import Boxplot
+import Plottings
 import Export
 import pandas as pd
 import Scatterplot
@@ -22,6 +23,9 @@ CleandDT = Cleanup.cleanRAWTable(IssuesDT)
 
 # get CT
 CalcDT = Calculate_CT.calculate_CT(CleandDT)
+
+title = Plottings.getTitle(CalcDT)
+
 
 Boxplot.boxplot_test(CalcDT)
 

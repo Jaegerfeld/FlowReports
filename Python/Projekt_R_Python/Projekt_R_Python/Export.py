@@ -10,3 +10,11 @@ def exportCSV(table, name):
     filepath = Path(firstpart + name + ".csv")  
     filepath.parent.mkdir(parents=True, exist_ok=True)  
     table.to_csv(filepath)  
+
+
+def getExportPath():
+
+    firstpart = os.getcwd()
+    path  = firstpart + '/Export/' 
+
+    return path
