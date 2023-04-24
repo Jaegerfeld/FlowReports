@@ -4,11 +4,14 @@ from scipy import stats
 import pandas as pd
 import seaborn as sns
 from datetime import datetime
+import Plottings
 
 
 def scatterplot_test(table):
 
     plt.figure(figsize=[10,15],)
+
+    plotTitle = Plottings.getTitle(table)
     
     table = table.convert_dtypes()
     #print(table.iloc[0][10]) # Example 11.10.2022 09:49
@@ -32,7 +35,7 @@ def scatterplot_test(table):
 
     print(table.info())
 
-   
+    
 
     x = list(table['Closed Date Timestamp']) #Dtype is a string Question is how to change string to float?
     y = list(table['CycleDays']) #Dtype is a flote
@@ -45,6 +48,7 @@ def scatterplot_test(table):
     mymodel = list(map(myfunc,x))
 
     plt.scatter(x,y)
+    plt.title(plotTitle)
     plt.plot(x,mymodel)
     plt.show()
 
