@@ -9,7 +9,7 @@ import Export
 
 def get_scatterplot_summary(table):
 
-    plt.figure(figsize=[10,15],)
+    plt.figure(figsize=[8,5],)
 
     plotTitle = Plottings.getTitle(table)
     
@@ -48,6 +48,7 @@ def get_scatterplot_summary(table):
     plt.plot(x,mymodel)
     export_path = Export.getExportPath() + 'scatterplot.pdf'
     plt.savefig(export_path)
+    #plt.savefig('scatterplot.pdf')
     plt.show()
 
     return plt
