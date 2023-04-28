@@ -34,7 +34,7 @@ def get_scatterplot_summary(table):
     
 
     x = list(table['Closed Date Timestamp']) #Dtype is a string Question is how to change string to float?
-    y = list(table['CycleDays']) #Dtype is a flote
+    y = list(table['CycleDays']) #Dtype is a float
 
     slope, intercept, r, p, std_err = stats.linregress(x,y)
 

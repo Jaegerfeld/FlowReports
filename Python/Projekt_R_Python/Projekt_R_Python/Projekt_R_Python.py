@@ -29,7 +29,7 @@ title = Plottings.getTitle(CalcDT)
 
 Boxplot.get_boxplot_summary(CalcDT)
 
-Scatterplot.get_scatterplot_summary(CalcDT)
+#Scatterplot.get_scatterplot_summary(CalcDT)
 
 #Export.exportCSV(CalcDT, "calcdt")
 
