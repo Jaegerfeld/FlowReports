@@ -11,6 +11,7 @@ from re import L
 from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
+#import matplotlib.axes as ax
 import Export
 import Plottings
 
@@ -25,13 +26,19 @@ def get_boxplot_summary(table):
     
     #y=table['Created Date']
     plotTitle = Plottings.getTitle(table)
-    plt.figure(figsize=[18,9],)
+    plt.figure(figsize=[18,9])
     plt.boxplot(x, vert = False, patch_artist = True, 
                 boxprops = dict(facecolor = 'orange'),
                 medianprops = dict(color = 'black'),
                 flierprops = dict(markerfacecolor="r", markersize=3))
 
+    ax = plt.gca()
+    ax.set_yticks([])
+
     plt.title(plotTitle)
+    plt.grid(True)
+    #ax = plt.axes()
+    #ax.xaxis.grid(True)
     export_path = Export.getExportPath() + 'boxplot.pdf'
     plt.savefig(export_path)
     plt.show()
