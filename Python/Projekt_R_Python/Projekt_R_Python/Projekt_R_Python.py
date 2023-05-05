@@ -1,3 +1,4 @@
+import seaborn
 import Import_CSV
 import Cleanup
 import Calculate_CT
@@ -6,6 +7,7 @@ import Plottings
 import Export
 import pandas as pd
 import Scatterplot
+import seabornPlot
 
 
 teamname = "Program"
@@ -28,10 +30,12 @@ title = Plottings.getTitle(CalcDT)
 
 
 Boxplot.get_boxplot_summary(CalcDT)
+seabornPlot.get_scatterPlot_summary(CalcDT)
+#seabornPlot.function2(CalcDT)
 
 #Scatterplot.get_scatterplot_summary(CalcDT)
 
-#Export.exportCSV(CalcDT, "calcdt")
+Export.exportCSV(CalcDT, "calcdt")
 
 
 

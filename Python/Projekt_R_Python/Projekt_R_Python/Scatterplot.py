@@ -51,6 +51,7 @@ def get_scatterplot_summary(table):
     #plt.savefig('scatterplot.pdf')
     plt.show()
 
+
     return plt
     
 

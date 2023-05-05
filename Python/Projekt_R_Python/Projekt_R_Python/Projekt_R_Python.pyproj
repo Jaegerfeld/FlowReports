@@ -31,6 +31,7 @@
     <Compile Include="Plottings.py" />
     <Compile Include="Projekt_R_Python.py" />
     <Compile Include="Scatterplot.py" />
+    <Compile Include="seabornPlot.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.11" />

@@ -41,29 +41,28 @@ def get_boxplot_summary(table):
     #ax.xaxis.grid(True)
     export_path = Export.getExportPath() + 'boxplot.pdf'
     plt.savefig(export_path)
-    plt.show()
+    #plt.show()
 
     return plt
 
-def boxplot_test2():
-
-    np.random.seed(100)
-
-    data_a = np.random.randint(2,15, size=15)
-    data_b = np.random.randint(5,18, size=20)
-    data_c = np.random.randint(2,20, size=30)
-    data_d = np.random.randint(1,30, size=40)
-
-    data_2d=[data_a,data_b,data_c,data_d]
-
-    plt.boxplot(data_2d)
-    plt.title('Boxplot Nr.2')
-    plt.show()
 
 
+def get_boxplot_Stages(table):
 
 
+    x = table['CycleDays']
+    
+    #y=table['Created Date']
+    plotTitle = "STAGES"
+    plt.figure(figsize=[18,9])
+    plt.boxplot(x, vert = False, patch_artist = True, 
+                boxprops = dict(facecolor = 'orange'),
+                medianprops = dict(color = 'black'),
+                flierprops = dict(markerfacecolor="r", markersize=3))
+    plt.title(plotTitle)
 
+    ax = plt.gca()
+    ax.set_yticks([])
 
 
 
