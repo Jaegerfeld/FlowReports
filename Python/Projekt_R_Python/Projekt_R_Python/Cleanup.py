@@ -11,8 +11,8 @@ def cleanRAWTable(table):
     #remove all undone issues
     df["Closed Date"].replace("", np.nan, inplace=True)
     df.dropna(subset=("Closed Date"), inplace=True)
-
-    df = df[(df.Resolution == 'Done ') | (df.Resolution == 'Done ') | (df.Resolution == 'Done ') ]
+    df = df[(df.Issuetype == 'Story') | (df.Issuetype == 'Task')]
+    df = df[(df.Resolution == 'Done') | (df.Resolution == 'Done') | (df.Resolution == 'Done') ]
 
 
     

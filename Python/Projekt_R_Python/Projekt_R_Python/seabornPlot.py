@@ -13,7 +13,7 @@ def get_scatterPlot_summary(table):
 
     plt.figure(figsize=[40,25])
 
-    table['Closed Date'] = pd.to_datetime(table['Closed Date'], format = '%d.%m.%Y %H:%M')
+    table['Closed Date'] = pd.to_datetime(table['Closed Date'], format = '%d.%m.%Y %H:%M:%S')
 
     y = table['CycleDays']    
     x = table['Closed Date']
