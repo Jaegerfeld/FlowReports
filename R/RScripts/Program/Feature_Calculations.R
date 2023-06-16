@@ -11,10 +11,10 @@ calcDT <- calcDT %>% filter( calcDT$`Closed Date`>= startDate)
 
 
 # wie lange ist die Cycletime in Minuten, CyleTime = InAnalysis bis Completed,  
-cyclemins <- round((as.numeric(calcDT$`In Analysis`)
+cyclemins <- round((as.numeric(calcDT$Analysis)
                     + as.numeric(calcDT$Backlog)
-                        + as.numeric(calcDT$`In Implementation`)
-                                + as.numeric(calcDT$Blocker)), digits = 1);
+                        + as.numeric(calcDT$`In Progress`)
+                                + as.numeric(calcDT$Pending)), digits = 1);
 
 # umrechnung in Tage CyleTime = InAnalysis bis Completed,  
 calcDT$CycleDays <- round(as.numeric(cyclemins / 1440), digits = 1);

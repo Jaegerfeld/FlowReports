@@ -7,10 +7,10 @@ calcDTAging <- Features_ALL_DT
 calcDTAging <- calcDTAging[!(is.na(calcDTAging$Status)),]
 calcDTAging <- calcDTAging[(is.na(calcDTAging$`Closed Date`)),]
 
-cycleAgingmins <- round((as.numeric(calcDTAging$`In Analysis`)
+cycleAgingmins <- round((as.numeric(calcDTAging$Analysis)
                     + as.numeric(calcDTAging$Backlog)
-                    + as.numeric(calcDTAging$`In Implementation`)
-                    + as.numeric(calcDTAging$Blocker)), digits = 1);
+                    + as.numeric(calcDTAging$`In Progress`)
+                    + as.numeric(calcDTAging$Pending)), digits = 1);
 
 calcDTAging$CycleDays <- round(as.numeric(cycleAgingmins / 1440), digits = 1);
 
@@ -41,7 +41,7 @@ AgingWIPPlot <- ggplot(NotReady_Aging_DT, aes(Status, CycleDays)) +
                fill="red") +
   geom_hline(yintercept=(summaryCycle[3]), linetype="dashed", color = "red") +
   theme(legend.position = "none")  +
-  scale_x_discrete(limits = c("Blocker", "In Analysis","Backlog","In Implementation")) +
+  scale_x_discrete(limits = c("Pending","Analysis","Backlog","In Progress")) +
   theme(axis.text.x = element_text(angle=65, vjust=0.6)) + 
    labs(title="Aging Work in Progress", 
         subtitle=Reporttitle,

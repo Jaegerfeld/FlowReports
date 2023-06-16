@@ -12,7 +12,7 @@ boxplotIssueTypes <- boxplot(calcDT$FunnelDays,calcDT$AnalysisDays,calcDT$Backlo
                              xlab = " days ", col = " orange ", border = " brown ", horizontal = TRUE, 
                              names = c("Funnel","Analysis","Backlog","Implementation", "Blocked" ),
                              bottom = "...")
-#print(cfdPlot)     #CFD Diagramm Plot
+print(cfdPlot)     #CFD Diagramm Plot
 print(AgingWIPPlot)
 dev.off() 
 
