@@ -1,0 +1,8 @@
+source("RScripts/DPO_ARTS_Summary/Portfolio_Connect.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Customer.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Delivery.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Product.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Employee.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Enterprise.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_Finance.R")
+source("RScripts/DPO_ARTS_Summary/Portfolio_IT4ALL.R")
